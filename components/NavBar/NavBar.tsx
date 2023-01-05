@@ -71,9 +71,9 @@ const NavBar = () => {
               <p className='text-lg text-blue-300'>Network</p>
           </div>
           <button className='outline-none border-nom text-blue-300 font-medium bg-[#04293A] shadow-lg
-          py-2 px-2.5  rounded-full flex items-center text-center gap-4' onClick={()=>{}}>Oxjdi...Ak3fj</button>
+          py-2 px-2.5  rounded-full flex items-center text-center gap-4' onClick={()=>setOpenModal(true)}>Connect</button>
           {
-            !openModal&&(
+            openModal&&(
               <Modal setOpenModal={setOpenModal} connectWallet="Connect"/>
             )
           }

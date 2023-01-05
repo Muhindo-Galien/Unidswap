@@ -1,8 +1,15 @@
 import React from 'react'
+type Props={
+  setOpenMTokenBox:(openTokenBox: boolean) => void;
+}
 
-const TokenList = () => {
+const TokenList = ({setOpenMTokenBox}:Props) => {
   return (
-    <div>TokenList</div>
+    <div className='TokenList'>
+      <div className='TokenList_box'>
+        <div></div>
+      </div>
+    </div>
   )
 }
 

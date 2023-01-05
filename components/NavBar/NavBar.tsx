@@ -82,7 +82,7 @@ const NavBar = () => {
       {/* tokenList */}
       {
         openTokenBox&&(
-          <TokenList setOpenMTokenBox={setOpenMTokenBox}/>
+          <TokenList tokenDate='hey' setOpenMTokenBox={setOpenMTokenBox}/>
         )
       }
     </div>

@@ -54,7 +54,7 @@ const Token = ({setOpenSetting}:Props) => {
              <p className='box_pare'>
               Transction deadline
              </p>
-             <Toggle/>
+             <Toggle label='No'/>
           </div>
        </div>
     </div>

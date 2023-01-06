@@ -22,6 +22,7 @@ const NavBar = () => {
       link:'/',
     },
   ]
+  const [connectedAccount, setConnectedAccount] = useState<boolean>(false);
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openTokenBox, setOpenMTokenBox] = useState<boolean>(false)
   
@@ -69,10 +70,16 @@ const NavBar = () => {
               <div className='right-icon-ether bg-blue-300 rounded-full p-[4px]'>
                 <SiEthereum className='text-xl'/>
               </div>
-              <p className='text-lg text-blue-300' onClick={()=>setOpenMTokenBox(true)}>Network</p>
+              <p className='text-lg text-blue-300'>Network</p>
           </div>
-          <button className='outline-none border-nom text-blue-300 font-medium bg-[#04293A] shadow-lg
-          py-2 px-4  rounded-md cursor-pointe' onClick={()=>setOpenModal(true)}>Connect</button>
+          {connectedAccount?(
+             <button className='outline-none border-nom text-blue-300 font-medium bg-[#04293A] shadow-lg
+             py-2 px-4  rounded-md cursor-pointe' onClick={()=>setOpenMTokenBox(true)}>OXk9a...93SQK</button>
+          ):(
+            <button className='outline-none border-nom text-blue-300 font-medium bg-[#04293A] shadow-lg
+            py-2 px-4  rounded-md cursor-pointe' onClick={()=>setOpenModal(true)}>Connect</button>
+          )}
+         
           {
             openModal&&(
               <Modal setOpenModal={setOpenModal} connectWallet="Connect"/>

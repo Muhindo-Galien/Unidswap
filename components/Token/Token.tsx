@@ -12,12 +12,12 @@ type Props={
 
 const Token = ({setOpenSetting}:Props) => {
   return (
-    <div className='fixed bg-[#04293A] bg-opacity-0 
+    <div className='fixed bg-[#508ca7] bg-opacity-0 
     transform duration-300  w-screen h-screen inset-0 shadow-xl grid justify-center items-center z-50 '>
-      <div className='w-11/12  m-4 px-6 py-4 rounded-lg bg-[#04293A] h-7/12 sm:w-[25rem] h-25rem'>
+      <div className='w-11/12  m-4 px-6 py-4 rounded-lg bg-[#04293A] h-8/12 sm:w-[25rem] h-25rem shadow-lg'>
           <div className='flex items-center justify-between pb-2'>
               <h2 className='text-lg font-semibold'>Setting</h2>
-              <div className='Modal_box_img'>
+              <div className=''>
                   <IoMdClose className='text-2xl cursor-pointer' onClick={()=>setOpenSetting(false)}/>
               </div>
           </div>

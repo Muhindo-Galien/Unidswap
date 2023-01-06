@@ -62,7 +62,7 @@ a{
 .Toggle_inner:after{
   float: left;
   width: 50%;
-  height: 36px;
+  height: 34px;
   padding: 0;
   line-height: 36px;
   color: #fff;
@@ -74,7 +74,6 @@ a{
   content: "Yes";
   padding-left: 10px;
   background-color:  rgba(147, 197, 253 ,1);
-
   color: #1e1e1e;
 }
 
@@ -107,7 +106,94 @@ a{
 .Toggle_checkbox:checked + .Toggle_label .Toggle_switch{
   right: 0;
 }
-/* toggle */
+/*-------------END--- toggle------------ */
+/* search token */
+
+.SearchToken{
+  position: absolute;
+  margin: 0 auto !important;
+  background-color: #04293A;
+  padding: 1.2rem;
+  border-radius: .5rem;
+  width:25rem;
+  height: auto;
+}
+
+.SearchToken_box_heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SearchToken_box_search{
+  display: flex;
+  align-items: center;
+  background-color: #041C32;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.SearchToken_box_search input{
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  color: #1e1e1e;
+  font-weight: 400;
+  width: 90%;
+}
+
+.SearchToken_box_tokens{
+  margin-top: .5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5rem;
+}
+
+.SearchToken_box_tokens span{
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  border: 1px solid rgba(147, 197, 253 ,1);
+  width: 5.7rem;
+  padding: .2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 35em) {
+  .SearchToken{
+      width: 95%;
+  }
+
+  .SearchToken_box_tokens{
+      display: flex;
+      flex-wrap: wrap;
+  }
+}
+/* ====END====search token */
+
+/*------------scroll------------*/
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: rgb(253, 254, 255);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(147, 197, 253 ,1);
+
+  border: 3px solid rgba(147, 197, 253 ,1);
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c0a0b9;
+}
+/* -------------END----Scroll-------------- */
 
 @media only screen and(max-width:35em){
   .hero_section{

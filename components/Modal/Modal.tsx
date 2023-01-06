@@ -16,7 +16,7 @@ const Modal = ({setOpenModal,connectWallet}:Props) => {
         <div className='flex items-center justify-between pb-2'>
           <p className='text-lg font-medium'>Connect Wallet</p>
           <div className='Modal_box_img'>
-              <IoMdClose className='text-2xl' onClick={()=>setOpenModal(false)}/>
+              <IoMdClose className='text-2xl cursor-pointer' onClick={()=>setOpenModal(false)}/>
           </div>
         </div>
           <div className='setOpenModal_wallet'>

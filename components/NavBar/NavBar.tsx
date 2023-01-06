@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import React,{useState,useEffect,useContext} from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../../assets/uniswap-uni-icon.png'
 import {Modal,TokenList} from '../index'
@@ -24,6 +24,7 @@ const NavBar = () => {
   ]
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openTokenBox, setOpenMTokenBox] = useState<boolean>(false)
+  
   return (
     <div className='max-w-7xl mx-auto my-8 navbar' >
       {/* grid-cols-1 lg:grid-cols-4  */}
@@ -64,14 +65,14 @@ const NavBar = () => {
         </div>
         {/* right */}
         <div className='flex items-center justify-end gap-4'>
-          <div className='flex items-center gap-4 hover:bg-[#04293A] py-2 px-2.5  rounded-md cursor-pointer  capitalize'>
+          <div className='flex items-center gap-4 hover:bg-[#04293A] shadow-lg py-2 px-2.5  rounded-md cursor-pointer  capitalize'>
               <div className='right-icon-ether bg-blue-300 rounded-full p-[4px]'>
                 <SiEthereum className='text-xl'/>
               </div>
-              <p className='text-lg text-blue-300'>Network</p>
+              <p className='text-lg text-blue-300' onClick={()=>setOpenMTokenBox(true)}>Network</p>
           </div>
           <button className='outline-none border-nom text-blue-300 font-medium bg-[#04293A] shadow-lg
-          py-2 px-2.5  rounded-full flex items-center text-center gap-4' onClick={()=>setOpenModal(true)}>Connect</button>
+          py-2 px-4  rounded-md cursor-pointe' onClick={()=>setOpenModal(true)}>Connect</button>
           {
             openModal&&(
               <Modal setOpenModal={setOpenModal} connectWallet="Connect"/>

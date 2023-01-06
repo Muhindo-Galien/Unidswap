@@ -6,14 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // screens: {
-      //   sm: "649px",
-      //   md: "650px",
-      //   mobile: { max: "649px" },
-      //   "min-xl": { max: "1280px" },
-      //   "min-lg": { max: "1024px" },
-      //   "min-md": { max: "838px" },
-      // },
+      screens: {
+        sm: "35em",
+        // md: "650px",
+        // mobile: { max: "649px" },
+        // "min-xl": { max: "1280px" },
+        // "min-lg": { max: "1024px" },
+        // "min-md": { max: "838px" },
+      },
     fontFamily: {
       globalFont: ["Poppins", "sans-serif"],
     },

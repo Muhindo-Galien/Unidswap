@@ -1,10 +1,10 @@
-
+import React,{useState,useEffect,useContext} from 'react'
+import { HeroSection } from '../components'
 
 export default function Home() {
   return (
     <div>
-   
-      <h1 className="text-2xl">Home</h1>
+      <HeroSection/>
     </div>
     )
 }

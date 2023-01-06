@@ -39,7 +39,7 @@ const HeroSection = ({accounts,tokenData}:Props) => {
         <div className='flex items-center justify-between  border border-blue-400 rounded-lg mt-4 pl-8 '>
           <input type="text"
            placeholder='0'
-           className='border-none outline-none bg-transparent text-blue-400 text-lg w-3/5  sm:w-4/5 lg:w-full'
+           className='border-none outline-none bg-transparent text-blue-400 text-lg w-3/5  sm:w-4/5 lg:w-auto'
            />
           <button onClick={()=>setOpenToken(true)} className='flex justify-center items-center gap-1
            bg-blue-400 p-2 font-semibold text-lg rounded-br-lg rounded-tr-lg'>
@@ -55,10 +55,10 @@ const HeroSection = ({accounts,tokenData}:Props) => {
         <div className='flex items-center justify-between border border-blue-400 rounded-lg mt-4 pl-8'>
           <input type="text"
            placeholder='0'
-           className='border-none outline-none bg-transparent text-blue-400 text-lg w-3/5 sm:w-4/5 lg:w-full'
+           className='border-none outline-none bg-transparent text-blue-400 text-lg w-3/5 sm:w-4/5 lg:w-auto'
            />
           <button onClick={()=>setOpenToken(true)} className='flex justify-center items-center gap-1
-           bg-blue-400 p-2 font-semibold text-lg rounded-br-lg rounded-tr-lg'>
+           bg-blue-400 p-2 font-medium text-lg rounded-br-lg rounded-tr-lg'>
             <Image 
               src={tokenTwo.image || images.etherlogo} alt='ehter'
               width={20} height={20}
@@ -74,7 +74,7 @@ const HeroSection = ({accounts,tokenData}:Props) => {
           <button className='bg-blue-400 hover:bg-blue-500 border-0 outline-0 text-lg w-full py-2 mt-4 rounded-full font-semibold'>Swap</button>
         )}
       </div>
-      {openSetting &&<Token  openSetting={openSetting}/>}
+      {openSetting &&<Token  setOpenSetting={setOpenSetting}/>}
       {openSetting &&
       <SearchToken 
         tokenData={tokenData}

@@ -4,7 +4,7 @@ import { HeroSection } from '../components'
 export default function Home() {
   return (
     <div>
-      <HeroSection/>
+      <HeroSection tokenData="fdfdfdfd" accounts ="jdj" />
     </div>
     )
 }

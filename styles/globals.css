@@ -27,7 +27,14 @@ a{
 }
 
 @media only screen and(max-width:35em){
-  /* .TokenList{
-    margin:  0 auto !important;
-  } */
+  .hero_section{
+    width: 95% !important;
+  }
+  .hero_section_box{
+    width: 95% !important;
+  }
+  .hero_section_box_input input{
+    width: 60% !important;
+    
+  }
 }

@@ -2,13 +2,15 @@ import { connected } from 'process';
 import React from 'react'
 import { IoMdClose } from 'react-icons/io';
 
+
 type Props={
   setOpenModal:(openModal: boolean) => void;
-  connectWallet:string
+  connectWallet:()=>void
 
 }
 const Modal = ({setOpenModal,connectWallet}:Props) => {
   const walletMenu = ['MetaMask','Coinbase','Wallet','WalletConnect']
+
   return (
     <div className='absolute bg-[#04293A] bg-opacity-0 
     transform duration-300  w-screen h-screen inset-0 shadow-xl grid justify-center items-center z-50'>

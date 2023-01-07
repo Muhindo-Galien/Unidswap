@@ -25,6 +25,10 @@ const NavBar = () => {
   const [connectedAccount, setConnectedAccount] = useState<boolean>(false);
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openTokenBox, setOpenMTokenBox] = useState<boolean>(false)
+  function connectWallet(){
+    console.log("Soon"!);
+    
+  }
   
   return (
     <div className='max-w-7xl mx-auto my-8 navbar' >
@@ -82,7 +86,7 @@ const NavBar = () => {
          
           {
             openModal&&(
-              <Modal setOpenModal={setOpenModal} connectWallet="Connect"/>
+              <Modal setOpenModal={setOpenModal} connectWallet={connectWallet}/>
             )
           }
         </div>

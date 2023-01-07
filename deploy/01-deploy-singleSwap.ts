@@ -1,7 +1,7 @@
 import {DeployFunction} from "hardhat-deploy/types"
 import {HardhatRuntimeEnvironment} from "hardhat/types"
 
-const deploysingleSwapToken: DeployFunction = async function (
+const deploySingleSwapToken: DeployFunction = async function (
   hre: HardhatRuntimeEnvironment
 ) {
     const { deployments, getNamedAccounts, network, ethers } = hre
@@ -19,5 +19,5 @@ const deploysingleSwapToken: DeployFunction = async function (
     log("contract deployed at: ",singleSwapToken.address)
     log("----------------------------------------------------")
 }
-
-export default deploysingleSwapToken.tags = ["all", "singleSwapToken"]
+export default deploySingleSwapToken   
+deploySingleSwapToken.tags = ["all", "singleSwapToken"]

@@ -10,13 +10,18 @@ import { HardhatUserConfig } from "hardhat/config"
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const GOERLI_RPC_URL =process.env.GOERLI_RPC_URL
-
+const ALCHEMY_MAINNET_RPC_URL_KEY = process.env.MAINNET_RPC_URL ||
+process.env.ALCHEMY_MAINNET_RPC_URL
+// const MAINNET_RPC_URL = process.env.ALCHEMY_MAINNET_RPC_URL ALCHEMY_MAINNET_RPC_URL
 
   const config: HardhatUserConfig = {
     defaultNetwork: "hardhat",
     networks: {
         hardhat: {
             chainId: 31337,
+            forking: {
+                url: `https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_MAINNET_RPC_URL_KEY}`,
+            },
         },
         localhost: {
             chainId: 31337,
